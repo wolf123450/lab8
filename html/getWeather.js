@@ -16,7 +16,7 @@ $("#button").click(function(e) {
 			e.preventDefault();
 		});
 		$("#cityField").keyup(function () {
-			var url = "http://ninjabrawl.me/getcity?q=";
+			var url = "/getcity?q=";
 			url += $("#cityField").val();
 			console.log(url);
 			$.getJSON(url,function(data) {

@@ -4,7 +4,7 @@ $(document).ready(function(){
     var myobj = {Name:$("#Name").val(),Comment:$("#Comment").val()};
     jobj = JSON.stringify(myobj);
     $("#json").text(jobj);
-    var posturl = "http://ninjabrawl.me/comment";
+    var posturl = "/comment";
     // $.post(posturl,jobj,function(data,textStatus) {
     //   $("#done").append(textStatus);
     // });
@@ -20,7 +20,8 @@ $(document).ready(function(){
         });
   });
   $("button#show").click(function() {
-    var geturl = "http://ninjabrawl.me/comment"
+    // var geturl = "https://ninjabrawl.me/comment"
+    var geturl = "/comment";
     $.getJSON(geturl, function(data) {
       var everything;
       everything = "<ul>";
